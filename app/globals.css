@@ -219,12 +219,3 @@
 .w-md-editor-toolbar {
     padding: 10px !important;
 }
-
-/* @layer base {
-  * {
-    @apply border-border;
-    }
-  body {
-    @apply bg-background text-foreground;
-    }
-} */
