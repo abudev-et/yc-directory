@@ -3,25 +3,21 @@ import SearchForm from '../../components/SearchForm'
 import StartupCard, { StartupTypeCard } from '@/components/StartupCard';
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { STARTUPS_QUERY } from '@/sanity/lib/queries';
+import { auth } from '@/auth';
 
 const Home = async ({ searchParams }: {
   searchParams: Promise<{query?: string}>
 }) => {
   const query = (await searchParams).query;
   const params = { search: query || null };
+
+  const session = await auth();
+
+  console.log(session?.id);
+
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params  });
 
   console.log(JSON.stringify(posts))
-  // const posts = [{
-  //   _createdAt: new Date(),
-  //   views: 55,
-  //   author: {_id: 1, name: 'Abuki'},
-  //   _id: 1,
-  //   description: "This is a description",
-  //   image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*9HY0dyZdTkryuRgkCiJjxQ.jpeg",
-  //   category: "Robot",
-  //   title: "We Robots"
-  // }]
   return (
     <>
       <section className='pink_container'>
