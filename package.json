@@ -27,7 +27,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "easymde": "^2.18.0",
-    "escape-string-regexp": "^5.0.0",
     "groq": "^3.71.2",
     "groq-js": "^1.14.2",
     "lucide-react": "^0.469.0",
