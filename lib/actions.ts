@@ -51,7 +51,3 @@ export const createPitch = async (
             });
           }
 }
-
-// function slugify(arg0: string, arg1: { lower: boolean; strict: boolean; }) {
-//     throw new Error("Function not implemented.");
-// }
